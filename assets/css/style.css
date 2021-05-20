@@ -22,13 +22,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    min-height: 100vh;
 }
 
 .bg-home {
     background-color: #ececec;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
+}
+
+.centerMid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 .img-home {
@@ -39,7 +47,7 @@
 
 .img-home img {
     width: 100%;
-    transform: translate(45px, 40px);
+    transform: translate(3vw, 2.5vw);
     transition: 2s ease-in-out;
 }
 
@@ -128,7 +136,7 @@
 /* Project */
 .bg-project {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -189,4 +197,50 @@
 
 .back a:hover {
     color: #6e6e6e;
+}
+
+@media(max-width: 768px){
+    .xs-home {
+        display: flex;
+        padding-bottom: 80px;
+    }
+
+    .xs-home .img-home {
+        margin-top: 10%;
+    }
+
+    .menu ul li a:hover span {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .xl-home {
+        display: none;
+    }
+
+    .bg-project {
+        padding-bottom: 80px;
+        padding-top: 20px;
+    }
+    
+    .card-project {
+        margin-bottom: 20px;
+    }
+}
+
+@media(min-width: 769px){
+    .xs-home {
+        display: none;
+    }
+
+    .xl-home {
+        display: flex;
+    }
 }
